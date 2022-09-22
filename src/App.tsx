@@ -11,15 +11,15 @@ function App() {
   const [off, setOff ] = useState(0)
   
 
-  type Pokemon = {
-    id: number;
-    email: string;
-    first_name: string;
-  };
+  // type Pokemon = {
+  //   id: number;
+  //   email: string;
+  //   first_name: string;
+  // };
   
-  type GetUsersResponse = {
-    data: Pokemon[];
-  };
+  // type GetUsersResponse = {
+  //   data: Pokemon[];
+  // };
   
   async function getUsers(off: number) {
    
@@ -27,9 +27,9 @@ function App() {
     try {
 
       //const { data, status } = 
-      await axios.get<GetUsersResponse>(url, {headers: {Accept: 'application/json', },}, ).then((res)=>{
-        console.log(res.data);
-        setMaint(main => {return 0})
+      await axios.get(url, {headers: {Accept: 'application/json', },}, ).then((res)=>{
+        console.log(res.data.results);
+        Object.entries(res.data.results).forEach((line)=>{console.log(line)})
       });
      
 
