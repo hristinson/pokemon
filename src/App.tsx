@@ -3,10 +3,6 @@ import './App.css';
 import { Button } from 'react-bootstrap';
 import axios from 'axios';
 
-  // let offSet = 0;
-  // const url: string = `https://pokeapi.co/api/v2/pokemon/?offset=${offSet}&limit=20`;
-  // async function (){}
-
   type User = {
     id: number;
     email: string;
@@ -18,22 +14,14 @@ import axios from 'axios';
   };
   
   async function getUsers() {
+    const off = 0;
+    const url: string = `https://pokeapi.co/api/v2/pokemon/?offset=${off}&limit=20`;
     try {
-      // 👇️ const data: GetUsersResponse
-      const { data, status } = await axios.get<GetUsersResponse>(
-        'https://reqres.in/api/users',
-        {
-          headers: {
-            Accept: 'application/json',
-          },
-        },
-      );
-  
-      console.log(JSON.stringify(data, null, 4));
-  
-      // 👇️ "response status is: 200"
-      console.log('response status is: ', status);
-  
+
+      const { data, status } = await axios.get<GetUsersResponse>(url, {headers: {Accept: 'application/json', },}, );
+      console.log(data);
+      console.log(status);
+
       return data;
     } catch (error) {
       if (axios.isAxiosError(error)) {
@@ -45,14 +33,8 @@ import axios from 'axios';
       }
     }
   }
-  
-
-
-
-
 
 function App() {
-  
 
   return (
     <div className="App">
