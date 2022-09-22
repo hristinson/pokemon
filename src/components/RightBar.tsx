@@ -4,7 +4,7 @@ import { Button } from 'react-bootstrap';
 function RightBar() {
   return (
 <div className="RightBar">
-      <Button>Next</Button>
+  <Button onClick={()=>{console.log(`right`)}}>Preview</Button>
     </div>
   );
 }
