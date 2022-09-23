@@ -1,24 +1,31 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import { Button } from 'react-bootstrap';
 import Pokemon from './component/Pokemon';
 import  pokemons  from './component/getPokemons';
 
 function App() {
+  const [pokOpen, setPokOpen] = useState(null)
 
-  const pokOpen = pokemons()
-  .then((res)=>{return res})
+  useEffect(() => {
+    // pokemons().then((res)=>{ setPokOpen(res)})
+  }
+    );
+  
+
+  //console.log(pokOpen)
 
   return (
     <div className="App">
       <div>
-      <Pokemon poki={ pokemons() }/>
+      <Pokemon poki={ pokOpen }/>
       </div>
-      <Button onClick={
-        ()=>{console.log(pokOpen)}
-        } >Click ME</Button>
+      <Button >Click ME</Button>
+      
     </div>
   );
+  
 }
+
 
 export default App;
