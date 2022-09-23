@@ -6,12 +6,17 @@ import  pokemons  from './component/getPokemons';
 
 function App() {
 
+  const pokOpen = pokemons()
+  .then((res)=>{return res})
+
   return (
     <div className="App">
       <div>
       <Pokemon poki={ pokemons() }/>
       </div>
-      <Button onClick={()=>{pokemons().then((a)=>{console.log(pokemons())})}} >Click ME</Button>
+      <Button onClick={
+        ()=>{console.log(pokOpen)}
+        } >Click ME</Button>
     </div>
   );
 }
