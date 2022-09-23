@@ -5,7 +5,7 @@ function App(props: any) {
   //console.log(props)
   return (
     <div className="App">
-        1111111111111111111
+        Pokemons API
     </div>
   );
   
