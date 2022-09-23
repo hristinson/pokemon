@@ -8,8 +8,8 @@ function App() {
   const [pokOpen, setPokOpen] = useState(null)
 
   useEffect(() => {
-    // pokemons().then((res)=>{ setPokOpen(res)})
-  }
+    pokemons().then((res)=>{ setPokOpen(res)})
+  }, []
     );
   
 
