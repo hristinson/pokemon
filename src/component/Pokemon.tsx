@@ -1,11 +1,27 @@
-import React  from 'react';
+import React, { useEffect, useState }  from 'react';
+import { PokemonsIF } from '../models';
+
+interface PokemonProps {
+  pokemons: PokemonsIF
+}
 
 function App(props: any) {
 
-  console.log(props)
+  //const [propsState, setPropsState] = useState(0)
+
+ 
+  // useEffect(() => {
+  //   //console.log(props)
+  //   setPropsState(p => propsState+1)
+  // },[]);
+
+  console.log(props.dataPoki.name);
+  
+
   return (
-    <div className="App">
-        Pokemon!!!
+    <div className="border py-5 px-5 rounded flex fle-col items-center mb2">
+        Pokemon {props.dataPoki.name} is ready to fight!
+        <img src={props.dataPoki.url} ></img>
     </div>
   );
   
