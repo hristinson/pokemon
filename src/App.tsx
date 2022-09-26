@@ -17,28 +17,30 @@ function App() {
   //   url: `http://github.com`
   // }
 
-  // const [pokOpen, setPokOpen] = useState({})
-  // const [counter, setCounter] = useState(0)
+  const [pokOpen, setPokOpen] = useState(pokemonsData)
+  const [counter, setCounter] = useState(0)
 
-  // useEffect(() => {
-  //   //console.log(`init`)
-  //    pokemons().then((res: ProductProps)=>{ setPokOpen(res)})
+  useEffect(() => {
+    //console.log(pokOpen[0])
+     pokemons().then((res)=>{ setPokOpen(res)})
   
-  // }, [counter] );
+  }, []);
   
 
-  // console.log(pokOpen)
-
+  
   return (
     <div className="App">
+     {counter}
+     <Pokemon dataPoki={pokOpen[0]} ></Pokemon>
+     <Pokemon dataPoki={pokOpen[1]} ></Pokemon>
+     <Pokemon dataPoki={pokOpen[3]} ></Pokemon>
+     <Pokemon dataPoki={pokOpen[4]} ></Pokemon>
+     <Pokemon dataPoki={pokOpen[5]} ></Pokemon>
+     <Pokemon dataPoki={pokOpen[6]} ></Pokemon>
      
-     <Pokemon dataPoki={ pokemonsData[0] } />
-     <Pokemon dataPoki={ pokemonsData[1] } />
+     <Button onClick={(a)=>{ setCounter(counter+1); 
      
-
-
-
-
+      }}>Click me</Button>
     </div>
   );
   

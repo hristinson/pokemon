@@ -21,8 +21,8 @@ function App(props: any) {
   return (
     <div className="border py-5 px-5 rounded flex fle-col items-center mb2">
         Pokemon {props.dataPoki.name} is ready to fight!
-        <img src={props.dataPoki.url} ></img>
-    </div>
+        
+            </div>
   );
   
   
