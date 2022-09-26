@@ -16,7 +16,7 @@ function App(props: PokemonProps) {
 
   return (
     <div className="col">
-        Pokemon { props.pokemons.name } is ready to fight!  
+        <p className='pokemonFont'> Pokemon { props.pokemons.name } is ready to fight!  </p>
         <div className='imgPoki' >
           <img alt={props.pokemons.name} className='imgPoki'  src={ curentPokemon }></img>
         </div>

@@ -18,5 +18,13 @@
 }
 
 .row:nth-child(even) .col:nth-child(even) {
-  background: rgb(230, 184, 184);
+  background: rgb(188, 255, 229);
+}
+
+.pokemonFont {
+  font-size: 12px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bolder;
+  color: rgb(7, 58, 58);
+
 }
