@@ -15,7 +15,7 @@ function App(props: any) {
   //   setPropsState(p => propsState+1)
   // },[]);
 
-  console.log(props.dataPoki.name);
+  //console.log(props.dataPoki.name);
   
 
   return (
