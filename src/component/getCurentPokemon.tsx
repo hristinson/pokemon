@@ -1,9 +1,12 @@
 import axios from 'axios';
 
-    async function  pokemons(url: string) {
+    async function  pokemonCurrent(url: string) {
     try {
      return await axios.get(url, {headers: {Accept: 
       'application/json', },}, ).then((res)=>{
+        //console.log(`${url}`);
+        
+
         return res.data;  
       });
       
@@ -16,4 +19,4 @@ import axios from 'axios';
     }
   }
 
-  export default pokemons
+  export default pokemonCurrent

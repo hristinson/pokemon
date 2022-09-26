@@ -33,3 +33,8 @@ export interface PokemonsIF
                 name: string
                 url: string
     }
+
+    export interface CurentPokemon { 
+        name: string
+        url: string
+}

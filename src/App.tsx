@@ -34,6 +34,8 @@ function App() {
     <Pokemon pokemons={  pokOpen.results[17] }></Pokemon>
     <Pokemon pokemons={  pokOpen.results[18] }></Pokemon>
     <Pokemon pokemons={  pokOpen.results[19] }></Pokemon>
+    
+
     <Button onClick={(a)=>{ if(pokOpen.previous) setPokOfset(pokOpen.previous);}}>left</Button>
     <Button onClick={(a)=>{ if (pokOpen.next) setPokOfset(pokOpen.next); }}>right</Button>
 
