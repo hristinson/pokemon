@@ -1,4 +1,4 @@
-import React, { useEffect, useState }  from 'react';
+//import React, { useEffect, useState }  from 'react';
 import { PokemonsIF2 } from '../models';
 
 interface PokemonProps {

@@ -1,10 +1,7 @@
 import axios from 'axios';
 
-    async function  pokemons(a: any) {
-    const off = a;
-       
-    const url: string = 
-    `https://pokeapi.co/api/v2/pokemon/?offset=${off}&limit=20`;
+    async function  pokemons(url: string) {
+           
     try {
      return await axios.get(url, {headers: {Accept: 
       'application/json', },}, ).then((res)=>{

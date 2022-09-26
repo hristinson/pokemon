@@ -6,34 +6,14 @@ import { PokemonsIF } from './models';
 import  pokemons  from './component/getPokemons';
 import  { pokemonsData }  from './data/pokemons';
 
-
 function App() {
 
+  const [pokOfset, setPokOfset] = useState(`https://pokeapi.co/api/v2/pokemon/?offset=0&limit=20`)
   const [pokOpen, setPokOpen] = useState(pokemonsData)
-  const [pokOfset, setPokOfset] = useState(0)
- 
-  // pokemons(pokOfset).then((res: PokemonsIF)=>{ console.log(pokOpen);
-  //  })
-    
-  //console.log(pokOpen.results[0]);
-  
-
-  useEffect(() => { 
-
-      pokemons(0).then( (res: PokemonsIF) => {setPokOpen(res)} )
-
-   }, [])
-
-     //pokemons(0).then( (res: PokemonsIF) => { console.log(res)  } } )
-      
-      
-  useEffect(() => {
-    pokemons(pokOfset).then((res: PokemonsIF)=>{ setPokOpen(res)})
- }, [pokOfset]);
+  useEffect(() => {pokemons(pokOfset).then((res: PokemonsIF)=>{ setPokOpen(res)})}, [pokOfset]);
  
   return (
     <div className="App">
-
     <Pokemon pokemons={  pokOpen.results[0] }></Pokemon>
     <Pokemon pokemons={  pokOpen.results[1] }></Pokemon>
     <Pokemon pokemons={  pokOpen.results[2] }></Pokemon>
@@ -54,17 +34,12 @@ function App() {
     <Pokemon pokemons={  pokOpen.results[17] }></Pokemon>
     <Pokemon pokemons={  pokOpen.results[18] }></Pokemon>
     <Pokemon pokemons={  pokOpen.results[19] }></Pokemon>
-
-
-     
-     <Button onClick={(a)=>{ setPokOfset(19); }}>left</Button>
-     <Button onClick={(a)=>{ setPokOfset(39); }}>right</Button>
-
+    <Button onClick={(a)=>{ if(pokOpen.previous) setPokOfset(pokOpen.previous);}}>left</Button>
+    <Button onClick={(a)=>{ if (pokOpen.next) setPokOfset(pokOpen.next); }}>right</Button>
 
     </div>
   );
   
 }
-
 
 export default App;
