@@ -8,7 +8,7 @@ import axios from 'axios';
     try {
      return await axios.get(url, {headers: {Accept: 
       'application/json', },}, ).then((res)=>{
-        return res.data.results;  
+        return res.data;  
       });
       
       

@@ -1,5 +1,35 @@
-export interface PokemonsIF {
+export interface PokemonsIF 
 
-    name: string
-    url: string
-}
+    {"count":number,
+    "next": any,
+    "previous": any,
+    "results":
+        [
+            {"name": string, "url": string},
+            {"name": string, "url": string},
+            {"name": string, "url": string},
+            {"name": string, "url": string},
+            {"name": string, "url": string},
+            {"name": string, "url": string},
+            {"name": string, "url": string},
+            {"name": string, "url": string},
+            {"name": string, "url": string},
+            {"name": string, "url": string},
+            {"name": string, "url": string},
+            {"name": string, "url": string},
+            {"name": string, "url": string},
+            {"name": string, "url": string},
+            {"name": string, "url": string},
+            {"name": string, "url": string},
+            {"name": string, "url": string},
+            {"name": string, "url": string},
+            {"name": string, "url": string},
+            {"name": string, "url": string}]
+                
+    }
+
+
+    export interface PokemonsIF2 { 
+                name: string
+                url: string
+    }
