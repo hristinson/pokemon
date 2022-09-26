@@ -15,10 +15,12 @@
 }
 .row:nth-child(odd) .col:nth-child(odd) {
   background: rgb(255, 219, 219);
+  border-radius: 50px
 }
 
 .row:nth-child(even) .col:nth-child(even) {
   background: rgb(188, 255, 229);
+  border-radius: 50px
 }
 
 .pokemonFont {

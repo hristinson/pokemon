@@ -13,10 +13,11 @@ function App(props: PokemonProps) {
     if (props.pokemons.url !== `url`) pokemons(props.pokemons.url).then((res: any)=>{ setcurentPokemon(res.sprites.other.dream_world.front_default );
      })
   }, [props])
-
+  const nameOfPokemon = props.pokemons.name.charAt(0).toUpperCase() + props.pokemons.name.slice(1)
+  
   return (
     <div className="col">
-        <p className='pokemonFont'> Pokemon { props.pokemons.name } is ready to fight!  </p>
+        <p className='pokemonFont'> Pokemon name { nameOfPokemon }  </p>
         <div className='imgPoki' >
           <img alt={props.pokemons.name} className='imgPoki'  src={ curentPokemon }></img>
         </div>
