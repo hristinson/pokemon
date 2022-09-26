@@ -41,3 +41,18 @@
   width: 150px;
   height: 150px;
 }
+
+
+.col {
+  /* width: 100px;
+  height: 40px; */
+  display: inline-block;
+  
+}
+.row:nth-child(odd) .col:nth-child(odd) {
+  background: rgb(255, 219, 219);
+}
+
+.row:nth-child(even) .col:nth-child(even) {
+  background: rgb(230, 184, 184);
+}
