@@ -14,26 +14,44 @@ function App() {
  
   return (
     <div className="App">
+
+<div className="row">
     <Pokemon pokemons={  pokOpen.results[0] }></Pokemon>
     <Pokemon pokemons={  pokOpen.results[1] }></Pokemon>
     <Pokemon pokemons={  pokOpen.results[2] }></Pokemon>
     <Pokemon pokemons={  pokOpen.results[3] }></Pokemon>
     <Pokemon pokemons={  pokOpen.results[4] }></Pokemon>
-    <Pokemon pokemons={  pokOpen.results[5] }></Pokemon>
+    
+  </div>
+  <div className="row">
+
+  <Pokemon pokemons={  pokOpen.results[5] }></Pokemon>
     <Pokemon pokemons={  pokOpen.results[6] }></Pokemon>
     <Pokemon pokemons={  pokOpen.results[7] }></Pokemon>
     <Pokemon pokemons={  pokOpen.results[8] }></Pokemon>
     <Pokemon pokemons={  pokOpen.results[9] }></Pokemon>
-    <Pokemon pokemons={  pokOpen.results[10] }></Pokemon>
+
+  </div>
+  <div className="row">
+  <Pokemon pokemons={  pokOpen.results[10] }></Pokemon>
     <Pokemon pokemons={  pokOpen.results[11] }></Pokemon>
     <Pokemon pokemons={  pokOpen.results[12] }></Pokemon>
     <Pokemon pokemons={  pokOpen.results[13] }></Pokemon>
     <Pokemon pokemons={  pokOpen.results[14] }></Pokemon>
-    <Pokemon pokemons={  pokOpen.results[15] }></Pokemon>
+
+
+  </div>
+  <div className="row">
+
+  <Pokemon pokemons={  pokOpen.results[15] }></Pokemon>
     <Pokemon pokemons={  pokOpen.results[16] }></Pokemon>
     <Pokemon pokemons={  pokOpen.results[17] }></Pokemon>
     <Pokemon pokemons={  pokOpen.results[18] }></Pokemon>
     <Pokemon pokemons={  pokOpen.results[19] }></Pokemon>
+
+
+  </div>
+
     
 
     <Button onClick={(a)=>{ if(pokOpen.previous) setPokOfset(pokOpen.previous);}}>left</Button>

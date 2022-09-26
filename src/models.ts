@@ -29,7 +29,7 @@ export interface PokemonsIF
     }
 
 
-    export interface PokemonsIF2 { 
+    export interface PokemonsIFcurrent { 
                 name: string
                 url: string
     }
