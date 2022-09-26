@@ -2,4 +2,6 @@
 
 This project was show all pokemons
 
-26.09.2022 - Added network comunication with database
+This is a test task. SOLVVE 27.09.2022.
+I try to improve POkemon API with React Frontend solution
+using Type Script.
