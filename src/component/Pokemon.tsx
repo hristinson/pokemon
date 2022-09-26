@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { PokemonsIF2 } from '../models';
-import  pokemonCurrent  from './getCurentPokemon';
+import  pokemons  from './getPokemons';
 
 interface PokemonProps { pokemons: PokemonsIF2 }
 
@@ -9,7 +9,7 @@ function App(props: PokemonProps) {
   const [curentPokemon, setcurentPokemon] = useState(``)
   
   useEffect(() => {
-    if (props.pokemons.url !== `url`) pokemonCurrent(props.pokemons.url).then((res: any)=>{ setcurentPokemon(res.sprites.other.dream_world.front_default );
+    if (props.pokemons.url !== `url`) pokemons(props.pokemons.url).then((res: any)=>{ setcurentPokemon(res.sprites.other.dream_world.front_default );
      })
   }, [props])
 
