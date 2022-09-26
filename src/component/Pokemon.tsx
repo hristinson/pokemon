@@ -18,7 +18,9 @@ function App(props: PokemonProps) {
   return (
     <div className="border py-5 px-5 rounded flex fle-col items-center mb2">
         Pokemon { props.pokemons.name } is ready to fight!  
-        <img src={ curentPokemon }></img>
+        <div className='imgPoki' >
+          <img className='imgPoki'  src={ curentPokemon }></img>
+        </div>
     </div>
   );
   
