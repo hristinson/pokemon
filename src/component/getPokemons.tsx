@@ -1,7 +1,8 @@
 import axios from 'axios';
 
-    async function  pokemons() {
-    const off = 0;
+    async function  pokemons(a: any) {
+    const off = a;
+       
     const url: string = 
     `https://pokeapi.co/api/v2/pokemon/?offset=${off}&limit=20`;
     try {
