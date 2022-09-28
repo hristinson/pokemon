@@ -19,8 +19,6 @@ function App() {
   const previous = useCallback(() => {if(pokOpen.previous) setPokOfset(pokOpen.previous)}, [pokOpen])
   const next = useCallback(() => {if(pokOpen.next) setPokOfset(pokOpen.next)}, [pokOpen])
 
-  pokOpen.results.forEach( a => console.log(a) )
-
   return (
 <div className="App">
 
