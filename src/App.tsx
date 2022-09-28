@@ -19,6 +19,7 @@ function App() {
   const previous = useCallback(() => {if(pokOpen.previous) setPokOfset(pokOpen.previous)}, [pokOpen])
   const next = useCallback(() => {if(pokOpen.next) setPokOfset(pokOpen.next)}, [pokOpen])
 
+  pokOpen.results.forEach( a => console.log(a) )
 
   return (
 <div className="App">
@@ -27,10 +28,10 @@ function App() {
 
 <div>
   <div className="menu">
-  <Button className="btn btn-success" onClick={()=>{ previous() }}> previous pokemons </Button>
+  <Button className="btn btn-success" onClick={previous}> previous pokemons </Button>
    </div>
    <div className="menu">
-  <Button className="btn btn-success" onClick={()=>{ next() }}> next pokemons </Button>
+  <Button className="btn btn-success" onClick={next}> next pokemons </Button>
   </div>
   </div>
 </div>

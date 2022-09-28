@@ -5,21 +5,21 @@ import axios from 'axios';
 
 interface PokemonProps { pokemons: PokemonType }
 
-function App(props: PokemonProps) {
+function App(pokemons: PokemonProps) {
   const [curentPokemon, setcurentPokemon] = useState(loader)
   useEffect(() => {
-    if (props.pokemons.url !== `url`) axios.get<currentPokemon>(props.pokemons.url).then((res)=>{ 
+      axios.get<currentPokemon>(pokemons.pokemons.url).then((res)=>{ 
       setcurentPokemon(res.data.sprites.other.dream_world.front_default)
       }
         );
-      }, [props.pokemons.url])
+      }, [pokemons.pokemons.url])
   
-  const nameOfPokemon = props.pokemons.name.charAt(0).toUpperCase() + props.pokemons.name.slice(1)
+  const nameOfPokemon = pokemons.pokemons.name.charAt(0).toUpperCase() + pokemons.pokemons.name.slice(1)
   return (
     <div className="col">
         <p className='pokemonFont'> { nameOfPokemon }  </p>
         <div className='imgPoki' >
-          <img alt={props.pokemons.name } className='imgPoki'  src={ curentPokemon }></img>
+          <img alt={pokemons.pokemons.name } className='imgPoki'  src={ curentPokemon }></img>
         </div>
     </div>
   );
