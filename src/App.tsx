@@ -31,7 +31,7 @@ function App() {
 <div className="App">
 
 
-{pokOpen.results.map(element => <Pokemon pokemons={ element }></Pokemon> )}
+{pokOpen.results.map((element, key) => <Pokemon pokemons={ element } key={key}></Pokemon> )}
 
 
 <div>
