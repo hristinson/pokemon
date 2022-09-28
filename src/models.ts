@@ -1,35 +1,9 @@
-export interface PokemonsIF 
+export type PokemonType = {name: string, url: string}
+export type currentPokemon = {sprites: {other : {dream_world: {front_default: string}}} }
+export type PokemonResponse = {
+    count:number,
+    next: string | null
+    previous: string | null
+    results: PokemonType[]
 
-    {"count":number,
-    "next": any,
-    "previous": any,
-    "results":
-        [
-            {"name": string, "url": string},
-            {"name": string, "url": string},
-            {"name": string, "url": string},
-            {"name": string, "url": string},
-            {"name": string, "url": string},
-            {"name": string, "url": string},
-            {"name": string, "url": string},
-            {"name": string, "url": string},
-            {"name": string, "url": string},
-            {"name": string, "url": string},
-            {"name": string, "url": string},
-            {"name": string, "url": string},
-            {"name": string, "url": string},
-            {"name": string, "url": string},
-            {"name": string, "url": string},
-            {"name": string, "url": string},
-            {"name": string, "url": string},
-            {"name": string, "url": string},
-            {"name": string, "url": string},
-            {"name": string, "url": string}]
-                
-    }
-
-
-    export interface PokemonsIFcurrent { 
-                name: string
-                url: string
-    }
+}
