@@ -5,11 +5,7 @@ import Pokemon from './component/Pokemon';
 import { PokemonResponse } from './models';
 import axios from 'axios';
 
-
-
 function App() {
-
-  
 
   const [pokOfset, setPokOfset] = useState(`https://pokeapi.co/api/v2/pokemon/?offset=0&limit=20`)
   const [pokOpen, setPokOpen] = useState<PokemonResponse>({
@@ -20,19 +16,14 @@ function App() {
   })
   useEffect(() => {axios.get<PokemonResponse>(pokOfset).then((res)=>{ setPokOpen(res.data)})}, [pokOfset]);
 
-  // useCallback!
-
   const previous = useCallback(() => {if(pokOpen.previous) setPokOfset(pokOpen.previous)}, [pokOpen])
   const next = useCallback(() => {if(pokOpen.next) setPokOfset(pokOpen.next)}, [pokOpen])
-
 
 
   return (
 <div className="App">
 
-
 {pokOpen.results.map((element, key) => <Pokemon pokemons={ element } key={key}></Pokemon> )}
-
 
 <div>
   <div className="menu">
