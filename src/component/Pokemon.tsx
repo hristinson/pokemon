@@ -3,23 +3,23 @@ import { PokemonType, currentPokemon } from '../models';
 import loader from '../img/loader.png';
 import axios from 'axios';
 
-interface PokemonProps { pokemons: PokemonType }
+//interface PokemonProps { pokemons: PokemonType }
 
-function App(pokemons: PokemonProps) {
+function App({name, url}: PokemonType) {
   const [curentPokemon, setcurentPokemon] = useState(loader)
   useEffect(() => {
-      axios.get<currentPokemon>(pokemons.pokemons.url).then((res)=>{ 
+      axios.get<currentPokemon>(url).then((res)=>{ 
       setcurentPokemon(res.data.sprites.other.dream_world.front_default)
       }
         );
-      }, [pokemons.pokemons.url])
+      }, [url])
   
-  const nameOfPokemon = pokemons.pokemons.name.charAt(0).toUpperCase() + pokemons.pokemons.name.slice(1)
+  const nameOfPokemon = name.charAt(0).toUpperCase() + name.slice(1)
   return (
     <div className="col">
         <p className='pokemonFont'> { nameOfPokemon }  </p>
         <div className='imgPoki' >
-          <img alt={pokemons.pokemons.name } className='imgPoki'  src={ curentPokemon }></img>
+          <img alt={name } className='imgPoki'  src={ curentPokemon }></img>
         </div>
     </div>
   );
